@@ -8,13 +8,13 @@ void normalize_path(char *buf) {
         if (!Pre_slash && *buf == '/') {
             *result = '/';
             Pre_slash = true;
-            ++*result;
+            ++result;
         } else if (*buf != '/') {
             *result = *buf;
             Pre_slash = false;
-            ++*result;
+            ++result;
         }
-        ++*buf;
+        ++buf;
     }
     *result = '\0';
 }
